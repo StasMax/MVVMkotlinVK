@@ -8,7 +8,7 @@ import com.example.android.mvvmkotlinvk.presentation.asyncFlowable
 import com.example.android.mvvmkotlinvk.presentation.makeUnvisible
 import com.example.android.mvvmkotlinvk.presentation.makeVisible
 
-class FavoriteViewModel(private val interactor: IGroupInteractor) : BaseViewModel() {
+class FavoriteViewModel(val interactor: IGroupInteractor) : BaseViewModel() {
 
     val txtGroupsNoItemVis = MutableLiveData<Int>()
     val recyclerGroupsVis = MutableLiveData<Int>()

@@ -18,7 +18,7 @@ class FavoriteActivity : BaseActivity() {
     lateinit var viewModel: FavoriteViewModel
     lateinit var groupAdapterRv: GroupAdapterRv
     @Inject
-    internal var viewModelFactory: ViewModelFactory? = null
+    lateinit var viewModelFactory: ViewModelFactory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Toothpick.inject(this, App.scope)

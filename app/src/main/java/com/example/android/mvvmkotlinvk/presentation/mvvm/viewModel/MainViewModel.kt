@@ -6,7 +6,7 @@ import com.example.android.mvvmkotlinvk.data.model.ModelGroup
 import com.example.android.mvvmkotlinvk.interactor.IGroupInteractor
 import com.example.android.mvvmkotlinvk.presentation.*
 
-class MainViewModel(private val interactor: IGroupInteractor) : BaseViewModel() {
+class MainViewModel(val interactor: IGroupInteractor) : BaseViewModel() {
 
     val showToast = MutableLiveData<Int>()
     val txtGroupsNoItemVis = MutableLiveData<Int>()

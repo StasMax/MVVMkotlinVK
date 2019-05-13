@@ -29,7 +29,7 @@ class MainActivity : BaseActivity() {
     lateinit var adapter: GroupAdapterRv
     lateinit var viewModel : MainViewModel
     @Inject
-    internal var viewModelFactory: ViewModelFactory? = null
+    lateinit var viewModelFactory: ViewModelFactory
 
     override fun onCreate(savedInstanceState: Bundle?) {
         Toothpick.inject(this, App.scope)
