@@ -2,10 +2,6 @@ package com.example.android.mvvmkotlinvk.presentation
 
 import android.view.View
 
-fun View.makeVisible() {
-    visibility = View.VISIBLE
-}
+fun makeVisible(): Int = View.VISIBLE
 
-fun View.makeUnvisible() {
-    visibility = View.GONE
-}
+fun makeUnvisible(): Int = View.GONE
