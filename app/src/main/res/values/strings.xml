@@ -1,0 +1,11 @@
+<resources>
+    <string name="app_name">MVVMkotlinVK</string>
+    <string name="suc">Вы успешно авторизировались</string>
+    <string name="not_suc">Ошибка авторизации</string>
+    <string name="error_login">Ошибка ввода логина</string>
+    <string name="group_search_hint">Поиск по группам</string>
+    <string name="no_groups_item">Вы не вступили ни в одну группу</string>
+    <string name="show_error_loading">Ошибка загрузки</string>
+    <string name="no_groups_item_favorite">У Вас нет ни одной закладки</string>
+    <integer name="com_vk_sdk_AppId">6971252</integer>
+</resources>
