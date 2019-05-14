@@ -5,9 +5,18 @@ import com.example.android.mvvmkotlinvk.R
 import com.example.android.mvvmkotlinvk.data.model.ModelGroup
 import com.example.android.mvvmkotlinvk.interactor.IGroupInteractor
 import com.example.android.mvvmkotlinvk.presentation.*
+import com.example.android.mvvmkotlinvk.presentation.app.App
+import toothpick.Toothpick
+import javax.inject.Inject
 
-class MainViewModel(val interactor: IGroupInteractor) : BaseViewModel() {
+class MainViewModel : BaseViewModel() {
 
+    init {
+        Toothpick.inject(this, App.scope)
+    }
+
+    @Inject
+    lateinit var interactor: IGroupInteractor
     val showToast = MutableLiveData<Int>()
     val txtGroupsNoItemVis = MutableLiveData<Int>()
     val recyclerGroupsVis = MutableLiveData<Int>()

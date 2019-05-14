@@ -3,13 +3,20 @@ package com.example.android.mvvmkotlinvk.presentation.mvvm.viewModel
 import android.arch.lifecycle.MutableLiveData
 import com.example.android.mvvmkotlinvk.data.model.ModelGroup
 import com.example.android.mvvmkotlinvk.interactor.IGroupInteractor
+import com.example.android.mvvmkotlinvk.presentation.app.App
 import com.example.android.mvvmkotlinvk.presentation.asyncCompletable
 import com.example.android.mvvmkotlinvk.presentation.asyncFlowable
 import com.example.android.mvvmkotlinvk.presentation.makeUnvisible
 import com.example.android.mvvmkotlinvk.presentation.makeVisible
+import toothpick.Toothpick
+import javax.inject.Inject
 
-class FavoriteViewModel(val interactor: IGroupInteractor) : BaseViewModel() {
-
+class FavoriteViewModel : BaseViewModel() {
+    init {
+        Toothpick.inject(this, App.scope)
+    }
+    @Inject
+    lateinit var interactor: IGroupInteractor
     val txtGroupsNoItemVis = MutableLiveData<Int>()
     val recyclerGroupsVis = MutableLiveData<Int>()
     val modelGroups = MutableLiveData<List<ModelGroup>>()
